@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#172424"><meta name="description" content="星笺，有一份生日祝福等待你开启。">
+  <title>星笺，生日快乐</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23172424'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-size='44' fill='%23d7b678'%3E✧%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scene" aria-hidden="true"></div><div class="shade" aria-hidden="true"></div>
+  <div class="frame" aria-hidden="true"></div>
+  <header class="masthead"><span>THE BIRTHDAY LETTER</span><span>致 · 星笺</span></header>
+  <main>
+    <section class="arrival" id="arrival" aria-labelledby="invitation-title"><div class="invitation-copy"><div class="manor-trim trim-top" aria-hidden="true">❦ <span>◇ · ✧ · ◇</span> ❦</div>
+      <div class="eyebrow">今夜，庄园为你留了一盏灯</div>
+      <h1 id="invitation-title">生日快乐，<br><span>星笺酱</span></h1>
+      <div class="divider" aria-hidden="true">──── &nbsp; ✧ &nbsp; ────</div>
+      <p class="intro">有一份小小的祝福，<br>等你亲手打开。</p>
+      <button class="seal" id="open-letter" aria-label="打开生日来信"><span class="seal-mark" aria-hidden="true">✧</span><span class="seal-caption">开启</span></button>
+      <p class="hint">轻触封印 · 阅读来信</p>
+      <span class="arrival-bottom">愿今天的所有美好，都与你相遇。</span><div class="manor-trim trim-bottom" aria-hidden="true">❦ <span>✧ · ◇ · ✧</span> ❦</div></div>
+    </section>
+    <section class="letter-view" id="letter-view" hidden aria-label="生日来信">
+      <div class="letter-toolbar"><span>一封写给你的信</span><button id="close-letter" type="button">收起信件 <span aria-hidden="true">×</span></button></div>
+      <article class="paper" aria-label="信件原文"><div class="paper-rule" aria-hidden="true">✧</div><div id="letter-content"></div><div class="paper-end" aria-hidden="true">✧</div></article>
+      <div class="ending"><span class="eyebrow">A SPECIAL DELIVERY</span><p>愿充满善意的你，也能被生活善待</p><button class="wish-button" id="fireworks-open">一起去看花火</button><button class="wish-button" id="wish-button">✧ &nbsp; 许个生日愿望</button><p id="wish-message" role="status" aria-live="polite"></p></div>
+    </section>
+  </main>
+  <dialog id="fireworks-dialog" aria-labelledby="fireworks-title">
+    <button class="modal-close" id="fireworks-close" aria-label="关闭花火大会">×</button>
+    <div class="night-sky" id="night-sky"><div class="sky-copy"><span>今夜，大家都在这里</span><h2 id="fireworks-title">陪星笺酱，看一场花火。</h2><p>轻点夜空，让你的花火绽放。</p></div><button id="launch-firework" class="wish-button">点亮夜空</button><div class="firework-layer" id="firework-layer" aria-hidden="true"></div></div>
+    <img class="friends-panorama" src="manor-friends.jpg" alt="你提供的第五人格庄园角色大合照，大家聚在一起">
+    <div class="fireworks-bottom"><p>愿这一刻的热闹，成为你新一岁的好开场。</p><button class="wish-button" id="fireworks-next">还有一份礼物，等你收下</button></div>
+  </dialog>
+  <dialog id="birthday-surprise" aria-labelledby="surprise-title">
+    <button class="modal-close" id="surprise-close" aria-label="关闭生日彩蛋">×</button>
+    <button class="gift-art" id="gift-art" aria-label="放大查看蛋糕"><img src="wildling-cake.png" alt="野人穆罗骑着野猪，向你送上点着蜡烛的生日蛋糕" width="1024" height="1280"></button>
+    <div class="surprise-caption"><span>来自庄园的特别派送</span><h2 id="surprise-title">星笺，生日快乐！</h2><p>野人和他的伙伴，带着蛋糕来啦。</p><button class="wish-button" id="receive-cake">收下蛋糕，许个愿</button><p id="cake-message" role="status"></p></div>
+  </dialog>
+  <footer>一份只为你准备的生日祝福</footer>
+  <script id="letter-data" type="application/json">[
+  "亲爱的嘉晟小同学：",
+  "生日快乐！(｡･∀･)ﾉﾞ嗨！不知不觉中竟然认识了你这么长时间，不过我始终确定的是，认识你是一件足够幸运的事，因为你实在是太热心、太温暖了，可以说甚至是被感染到了吧，我也学着像你这样，给他人多一些关心和回应，逐渐变得开心且开朗起来了。终于让我等到你过生日了，你总是想着让身边人过得好，那么我希望你也能过得好，开开心心的，不仅仅是生日，是每一天哦！",
+  "由于先前确实只接触过我哥这样冷冷默默的男孩纸，我从来没有奢求过任何人的回应，大家都太忙了，社会大环境也是冰凉的。但是你还愿意听我每天的碎碎念，还会认真回复，我特别感动，你仿佛是天使来的吧，每次跟你说话都感觉很治愈，多希望时间能长一点、慢一点，就可以跟你多说说话了，上天好像听到过我的诉求，几次跟你出去玩，都会遇到刚好从面前驶过的电车，这样就可以跟你在站台多聊一会儿哈哈哈。最感动的是，你一直说广州的环境没有我形容的那么开放包容，你肯定也见过了很多黑暗的一面，但你还是选择做一个温柔体面的人，也因为有你的存在，我始终认为广州是鲜活的。",
+  "之前我说你帮过我很多，那些可不是客套话哦，我是切切实实记在心里的。其实我在一个新环境也会感到害怕和不安，但还好每次都有你在，你会拉着我去体验一些新鲜的事物。没有你的话，我也享受不到鸣潮这么好的剧情体验，我直接接了我哥的号来玩，跳过了很多新手教程，哈哈哈最开始玩的时候还要你带着我开地图，你很细心地教我怎么使用风翼，仿佛又回到了小时候和我哥一起玩游戏的时光。而且每次问到你游戏决策问题，你都会打一长串文字教我，从来不敷衍，你放心，我也会好好记下来，不会白费了你的好意的！这次暑假赴广州实习，也是你给了我足够的底气，因为跟我妈说我有朋友在，他们才放心让我一个人过来闯荡。其实在这期间我住过一个环境特别差的青旅，刚搬过去都要掉小珍珠了，原来我没有自己想象中的那么勇敢，不过你告诉我，有遇到什么麻烦都可以找你帮忙，我就安心了好多，基于善良的性格特质，你自然而然地说了这句话，可能早已不记得了，但是我默默记了很久。你好像植物大战僵尸的向日葵，会生产阳光！！再后来的工位也是冷冷的跟冰窖一样，还好你借给我外套我才没有感冒呢ovo。每次跟你出去玩，微信步数都能上万，不过我一点都不感觉累，好神奇啊，反而觉得很放松，很喜欢这样散步。",
+  "不知道你看这种大长文会不会很紧张哈哈哈哈，不过没关系的，你不用每每都回我，这样会太累了吧。不知道你看到这里是一种什么心情2333，俗话说言多必失，之前为了多了解你一些些，可能问过一些你不太想说的事情，你以后也不用勉强，我会注意到的，等你愿意说的时候，我更愿意听！！",
+  "之前认识你的时候你空闲时间还比较多，暑假察觉到你也渐渐忙起来了，牺牲掉了一些做自己喜欢的事情的时间，身负一些世俗规训。但是没关系，我们会成长的！累了，也别忘了停下脚步，看看周围的风景。加油！慢慢来！你一定能完成未实现的梦想！",
+  "对了大帅锅，我一直想说，你笑起来有小梨涡超好看！！不过我没有不礼貌盯着你看的喔，是几次不经意间看到的，我也觉得很意外能观察到你的新特点！！希望以后能get到你的更多新风格和新特点！最近发现你还有点抽象哈哈哈哈哈",
+  "希望还能陪你过好多生日，还能认识你很久很久，我会收集好多好玩有趣的见闻，到时候再跟你分享的！",
+  "2026年9月15日"
+]</script>
+  <script src="app.js"></script>
+</body>
+</html>
